@@ -4,10 +4,15 @@
   "description": "auto detetive package manager",
   "main": "lib/index.js",
   "license": "MIT",
-  "files": ["lib"],
+  "files": ["lib", "README.md"],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "scripts": {
     "build": "babel src/ --out-dir lib/",
-    "test": "jest"
+    "test": "jest",
+    "publish":
+      "yarn publish --registry https://registry.npmjs.org --access public"
   },
   "keywords": ["detetive", "package manager"],
   "bugs": {
